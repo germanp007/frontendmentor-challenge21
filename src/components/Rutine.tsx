@@ -3,12 +3,39 @@ import NumberCounter from "./NumberCounter";
 import data from "../../public/data.json";
 type Props = {
   timeInterval: string;
+  image: string;
+  title: string;
+  index: number;
+  background: string;
 };
 
-const Work: FC<Props> = ({ timeInterval }) => {
+type Timeframe = {
+  current: number;
+  previous: number;
+};
+
+type Activity = {
+  title: string;
+  timeframes: {
+    daily: Timeframe;
+    weekly: Timeframe;
+    monthly: Timeframe;
+    [key: string]: Timeframe; // Firma de índice para permitir cadenas adicionales
+  };
+};
+
+const Rutine: FC<Props> = ({
+  timeInterval,
+  image,
+  title,
+  index,
+  background,
+}) => {
+  const activity: Activity | undefined = data[index];
+
   return (
     <div
-      className={`row-span-1 h-[160px] rounded-[1rem] bg-[url(../images/icon-work.svg)] bg-LightRed bg-no-repeat flex items-end sm:h-[244px]`}
+      className={`row-span-1 h-[160px] rounded-[1rem] bg-[url(../images/icon-${image}.svg)] bg-${background} bg-no-repeat flex items-end sm:h-[244px]`}
       style={{
         backgroundPositionX: "93%",
         backgroundPositionY: "-10%",
@@ -16,13 +43,13 @@ const Work: FC<Props> = ({ timeInterval }) => {
     >
       <div className="bg-DarkBlue h-[120px] w-full rounded-[1rem] flex flex-col items-center py-6 sm:h-[204px] sm:px-6">
         <div className="w-[85%] h-[30px] flex justify-between items-center m-auto sm:h-[20px] sm:m-0 sm:mb-6">
-          <h2 className="text-lg text-white font-normal">Work</h2>
+          <h2 className="text-lg text-white font-normal">{title}</h2>
           <img src="../images/icon-ellipsis.svg" alt="ellipsis" />
         </div>
         <div className="w-[85%] h-[30px] flex justify-between items-center m-auto sm:flex-col sm:m-0 sm:items-start">
           <h2 className="text-[32px] sm:text-[54px] sm:font-light">
             <NumberCounter
-              endValue={data[0].timeframes?.[timeInterval].current}
+              endValue={activity.timeframes?.[timeInterval].current}
             />
             hrs
           </h2>
@@ -36,7 +63,7 @@ const Work: FC<Props> = ({ timeInterval }) => {
               ? "Last Month - "
               : ""}
             <NumberCounter
-              endValue={data[0].timeframes?.[timeInterval].previous}
+              endValue={activity.timeframes?.[timeInterval].previous}
             />
             hrs
           </h3>
@@ -46,4 +73,4 @@ const Work: FC<Props> = ({ timeInterval }) => {
   );
 };
 
-export default Work;
+export default Rutine;
