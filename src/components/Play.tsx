@@ -29,7 +29,7 @@ const Play: FC<Props> = ({ timeInterval }) => {
   };
   return (
     <div
-      className={`row-span-1 h-[160px] rounded-[1rem] bg-[url(../images/icon-play.svg)] bg-SoftBlue bg-no-repeat flex items-end sm:h-[244px]`}
+      className={`row-span-1 h-[160px] rounded-[1rem] bg-[url(../images/icon-play.svg)] bg-SoftBlue bg-no-repeat flex items-end sm:h-[244px] md:col-span-2 lg:col-span-1`}
       style={{
         backgroundPositionX: "93%",
         backgroundPositionY: "-5%",

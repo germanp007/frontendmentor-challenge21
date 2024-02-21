@@ -7,7 +7,7 @@ type Props = {
 
 const Avatar: FC<Props> = ({ setTimeInterval, timeInterval }) => {
   return (
-    <div className="bg-DarkBlue row-span-1 h-[215px] rounded-[1rem] sm:row-span-2 sm:h-full">
+    <div className="bg-DarkBlue row-span-1 h-[215px] rounded-[1rem] sm:row-span-2 sm:h-full md:col-span-2 lg:col-span-1">
       <div className="bg-Blue h-[144px] w-full rounded-[1rem] flex justify-start gap-4 items-center p-5 sm:h-[354px] sm:flex-col sm:items-start sm:p-10">
         <figure>
           <img
