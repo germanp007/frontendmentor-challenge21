@@ -3,6 +3,7 @@ import Avatar from "./components/Avatar";
 // import Rutine from "./components/Rutine";
 import NumberCounter from "./components/NumberCounter";
 import data from "../public/data.json";
+import Work from "./components/Work";
 type TimeInterval = "daily" | "weekly" | "monthly";
 const App = () => {
   const [timeInterval, setTimeInterval] = useState<TimeInterval>("weekly");
@@ -30,6 +31,7 @@ const App = () => {
     <main className="bg-VeryDarkBlue w-screen min-h-screen flex flex-col py-5 justify-center items-center">
       <article className="grid grid-cols-1 w-[90%] max-w-[1140px] text-white gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 sm:gap-8">
         <Avatar setTimeInterval={setTimeInterval} timeInterval={timeInterval} />
+        <Work timeInterval={timeInterval} />
         <div
           className={`row-span-1 h-[160px] rounded-[1rem] bg-[url(../images/icon-work.svg)] bg-LightRed bg-no-repeat flex items-end sm:h-[244px]`}
           style={{
