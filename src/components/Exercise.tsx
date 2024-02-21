@@ -32,7 +32,7 @@ const Exercise: FC<Props> = ({ timeInterval }) => {
       className={`row-span-1 h-[160px] rounded-[1rem] bg-[url(../images/icon-exercise.svg)] bg-LimeGreen bg-no-repeat flex items-end sm:h-[244px]`}
       style={{
         backgroundPositionX: "93%",
-        backgroundPositionY: "-5%",
+        backgroundPositionY: "-2%",
       }}
     >
       <div className="bg-DarkBlue h-[120px] w-full rounded-[1rem] flex flex-col items-center py-6 sm:h-[204px] sm:px-6 hover:bg-HoverCard cursor-pointer transition-all duration-500">
