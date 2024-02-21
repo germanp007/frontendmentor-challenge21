@@ -3,6 +3,7 @@ import Avatar from "./components/Avatar";
 import data from "../public/data.json";
 // import Activity from "./components/Activity";
 import NumberCounter from "./components/NumberCounter";
+import Work from "./components/Work";
 // import Activity from "./components/Activity";
 type TimeInterval = "daily" | "weekly" | "monthly";
 const App = () => {
@@ -40,7 +41,7 @@ const App = () => {
             timeInterval={timeInterval}
           />
         ))} */}
-        <div
+        {/* <div
           className={`row-span-1 h-[160px] rounded-[1rem] bg-[url(../images/icon-work.svg)] bg-LightRed bg-no-repeat flex items-end sm:h-[244px]`}
           style={{
             backgroundPositionX: "93%",
@@ -48,7 +49,7 @@ const App = () => {
           }}
         >
           <div className="bg-DarkBlue h-[120px] w-full rounded-[1rem] flex flex-col items-center py-6 sm:h-[204px] sm:px-6">
-            <div className="w-[85%] h-[30px] flex justify-between items-center m-auto sm:h-[20px] sm:m-0">
+            <div className="w-[85%] h-[30px] flex justify-between items-center m-auto sm:h-[20px] sm:m-0 sm:mb-6">
               <h2 className="text-lg text-white font-normal">Work</h2>
               <img src="../images/icon-ellipsis.svg" alt="ellipsis" />
             </div>
@@ -75,7 +76,8 @@ const App = () => {
               </h3>
             </div>
           </div>
-        </div>
+        </div> */}
+        <Work timeInterval={timeInterval} />
         <div
           className={`row-span-1 h-[160px] rounded-[1rem] bg-[url(../images/icon-play.svg)] bg-SoftBlue bg-no-repeat flex items-end sm:h-[244px]`}
           style={{
@@ -83,13 +85,13 @@ const App = () => {
             backgroundPositionY: "-10%",
           }}
         >
-          <div className="bg-DarkBlue h-[120px] w-full rounded-[1rem] flex flex-col items-center py-6 sm:h-[204px] ">
-            <div className="w-[85%] h-[30px] flex justify-between items-center m-auto">
+          <div className="bg-DarkBlue h-[120px] w-full rounded-[1rem] flex flex-col items-center py-6 sm:h-[204px] sm:px-6">
+            <div className="w-[85%] h-[30px] flex justify-between items-center m-auto sm:h-[20px] sm:m-0 sm:mb-6">
               <h2 className="text-lg text-white font-normal">Play</h2>
               <img src="../images/icon-ellipsis.svg" alt="ellipsis" />
             </div>
-            <div className="w-[85%] h-[30px] flex justify-between items-center m-auto">
-              <h2 className="text-[32px]">
+            <div className="w-[85%] h-[30px] flex justify-between items-center m-auto sm:flex-col sm:m-0 sm:items-start">
+              <h2 className="text-[32px] sm:text-[54px] sm:font-light">
                 <NumberCounter
                   endValue={data[1].timeframes?.[timeInterval].current}
                 />
@@ -119,13 +121,13 @@ const App = () => {
             backgroundPositionY: "-10%",
           }}
         >
-          <div className="bg-DarkBlue h-[120px] w-full rounded-[1rem] flex flex-col items-center py-6 sm:h-[204px] ">
-            <div className="w-[85%] h-[30px] flex justify-between items-center m-auto">
+          <div className="bg-DarkBlue h-[120px] w-full rounded-[1rem] flex flex-col items-center py-6 sm:h-[204px] sm:px-6">
+            <div className="w-[85%] h-[30px] flex justify-between items-center m-auto sm:h-[20px] sm:m-0 sm:mb-6">
               <h2 className="text-lg text-white font-normal">Study</h2>
               <img src="../images/icon-ellipsis.svg" alt="ellipsis" />
             </div>
-            <div className="w-[85%] h-[30px] flex justify-between items-center m-auto">
-              <h2 className="text-[32px]">
+            <div className="w-[85%] h-[30px] flex justify-between items-center m-auto sm:flex-col sm:m-0 sm:items-start">
+              <h2 className="text-[32px] sm:text-[54px] sm:font-light">
                 <NumberCounter
                   endValue={data[2].timeframes?.[timeInterval].current}
                 />
@@ -155,13 +157,13 @@ const App = () => {
             backgroundPositionY: "-2%",
           }}
         >
-          <div className="bg-DarkBlue h-[120px] w-full rounded-[1rem] flex flex-col items-center py-6 sm:h-[204px] ">
-            <div className="w-[85%] h-[30px] flex justify-between items-center m-auto">
+          <div className="bg-DarkBlue h-[120px] w-full rounded-[1rem] flex flex-col items-center py-6 sm:h-[204px] sm:px-6">
+            <div className="w-[85%] h-[30px] flex justify-between items-center m-auto sm:h-[20px] sm:m-0 sm:mb-6">
               <h2 className="text-lg text-white font-normal">Exercise</h2>
               <img src="../images/icon-ellipsis.svg" alt="ellipsis" />
             </div>
-            <div className="w-[85%] h-[30px] flex justify-between items-center m-auto">
-              <h2 className="text-[32px]">
+            <div className="w-[85%] h-[30px] flex justify-between items-center m-auto sm:flex-col sm:m-0 sm:items-start">
+              <h2 className="text-[32px] sm:text-[54px] sm:font-light">
                 <NumberCounter
                   endValue={data[3].timeframes?.[timeInterval].current}
                 />
@@ -191,13 +193,13 @@ const App = () => {
             backgroundPositionY: "-10%",
           }}
         >
-          <div className="bg-DarkBlue h-[120px] w-full rounded-[1rem] flex flex-col items-center py-6 sm:h-[204px] ">
-            <div className="w-[85%] h-[30px] flex justify-between items-center m-auto">
+          <div className="bg-DarkBlue h-[120px] w-full rounded-[1rem] flex flex-col items-center py-6 sm:h-[204px] sm:px-6">
+            <div className="w-[85%] h-[30px] flex justify-between items-center m-auto sm:h-[20px] sm:m-0 sm:mb-6">
               <h2 className="text-lg text-white font-normal">Social</h2>
               <img src="../images/icon-ellipsis.svg" alt="ellipsis" />
             </div>
-            <div className="w-[85%] h-[30px] flex justify-between items-center m-auto">
-              <h2 className="text-[32px]">
+            <div className="w-[85%] h-[30px] flex justify-between items-center m-auto sm:flex-col sm:m-0 sm:items-start">
+              <h2 className="text-[32px] sm:text-[54px] sm:font-light">
                 <NumberCounter
                   endValue={data[4].timeframes?.[timeInterval].current}
                 />
@@ -227,13 +229,13 @@ const App = () => {
             backgroundPositionY: "-10%",
           }}
         >
-          <div className="bg-DarkBlue h-[120px] w-full rounded-[1rem] flex flex-col items-center py-6 sm:h-[204px] ">
-            <div className="w-[85%] h-[30px] flex justify-between items-center m-auto">
+          <div className="bg-DarkBlue h-[120px] w-full rounded-[1rem] flex flex-col items-center py-6 sm:h-[204px] sm:px-6">
+            <div className="w-[85%] h-[30px] flex justify-between items-center m-auto sm:h-[20px] sm:m-0 sm:mb-6">
               <h2 className="text-lg text-white font-normal">Self Care</h2>
               <img src="../images/icon-ellipsis.svg" alt="ellipsis" />
             </div>
-            <div className="w-[85%] h-[30px] flex justify-between items-center m-auto">
-              <h2 className="text-[32px]">
+            <div className="w-[85%] h-[30px] flex justify-between items-center m-auto sm:flex-col sm:m-0 sm:items-start">
+              <h2 className="text-[32px] sm:text-[54px] sm:font-light">
                 <NumberCounter
                   endValue={data[5].timeframes?.[timeInterval].current}
                 />
