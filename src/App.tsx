@@ -29,7 +29,7 @@ const App = () => {
 
   return (
     <main className="bg-VeryDarkBlue w-screen min-h-screen flex flex-col py-5 justify-center items-center">
-      <article className="grid grid-cols-1 w-[90%] max-w-[1143px] text-white gap-6 sm:w-[80%] sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+      <article className="grid grid-cols-1 w-[90%] max-w-[1140px] text-white gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 sm:gap-8">
         <Avatar setTimeInterval={setTimeInterval} timeInterval={timeInterval} />
         {/* {dataModificated.map((ele) => (
           <Activity
@@ -47,13 +47,13 @@ const App = () => {
             backgroundPositionY: "-10%",
           }}
         >
-          <div className="bg-DarkBlue h-[120px] w-full rounded-[1rem] flex flex-col items-center py-6 sm:h-[204px] ">
-            <div className="w-[85%] h-[30px] flex justify-between items-center m-auto">
+          <div className="bg-DarkBlue h-[120px] w-full rounded-[1rem] flex flex-col items-center py-6 sm:h-[204px] sm:px-6">
+            <div className="w-[85%] h-[30px] flex justify-between items-center m-auto sm:h-[20px] sm:m-0">
               <h2 className="text-lg text-white font-normal">Work</h2>
               <img src="../images/icon-ellipsis.svg" alt="ellipsis" />
             </div>
-            <div className="w-[85%] h-[30px] flex justify-between items-center m-auto">
-              <h2 className="text-[32px]">
+            <div className="w-[85%] h-[30px] flex justify-between items-center m-auto sm:flex-col sm:m-0 sm:items-start">
+              <h2 className="text-[32px] sm:text-[54px] sm:font-light">
                 <NumberCounter
                   endValue={data[0].timeframes?.[timeInterval].current}
                 />
